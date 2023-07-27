@@ -4,7 +4,6 @@ use std::time::Duration;
 use std::io::{self, Write};
 use std::str;
 use serialport::SerialPort;
-// use std::mem::drop;
 
 #[allow(dead_code)]
 fn get_ports() {
@@ -43,6 +42,7 @@ fn single_write_read_until2(port: &mut Box<dyn SerialPort>) {
         // println!("{}", trimmed_data);
     }
 
+    // slower version of what is above that I wrote, but ChatGPT is better
     // let mut my_string = String::with_capacity(8);
     // let mut len_string = 0;
     // 'read_loop: loop {
