@@ -14,10 +14,10 @@ fn main() {
     let now = Instant::now();
 
     let mut x :bool = true;
-    for i in 1..200_000 {
+    for i in 1..200 {
         x = is_prime(i);
     }
-    sum_from_zero(1_000_000_000);
+    // sum_from_zero(1_000_000_000);
 
     let elapsed = now.elapsed();
     println!("Elapsed: {:.2?}", elapsed);
